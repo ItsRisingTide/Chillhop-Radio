@@ -7,25 +7,10 @@ import Library from "./components/Library"
 import Nav from "./components/Nav"
 import data from "./data"
 
-function App() {
-  const timeUpdateHandler = (e) => {
-    const current = e.target.currentTime
-    const duration = e.target.duration
-    const precentage = Math.round(
-      (Math.round(current) / Math.round(duration)) * 100
-    )
-
-    setSongInfo({
-      ...songInfo,
-      currentTime: current,
-      duration,
-      animationPercentage: precentage,
-    })
-  }
-
-  //Ref
+const App = () => {
+  //
   const audioRef = useRef(null)
-  //State
+  //
   const [songs, setSongs] = useState(data())
   const [currentSong, setCurrentSong] = useState(songs[0])
   const [isPlaying, setIsPlaying] = useState(false)
@@ -45,6 +30,21 @@ function App() {
     localStorage.getItem("volume") ? localStorage.getItem("volume") : 1
 
   const [volume, setVolume] = useState(JSON.parse(volumeStorage()))
+  //
+  const timeUpdateHandler = (e) => {
+    const current = e.target.currentTime
+    const duration = e.target.duration
+    const precentage = Math.round(
+      (Math.round(current) / Math.round(duration)) * 100
+    )
+
+    setSongInfo({
+      ...songInfo,
+      currentTime: current,
+      duration,
+      animationPercentage: precentage,
+    })
+  }
 
   const songEndHandler = async () => {
     if (repeat) {
@@ -61,9 +61,8 @@ function App() {
   }
   return (
     <div
-      className={`App ${theme === "Dark" ? "DarkTheme" : ""} ${
-        libraryStatus ? "active-library" : ""
-      }`}
+      className={`App ${theme === "Dark" ? "DarkTheme" : ""} ${libraryStatus ? "active-library" : ""
+        }`}
     >
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} isPlaying={isPlaying} />
