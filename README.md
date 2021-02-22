@@ -11,5 +11,5 @@ This app though doesn't have this feature yet.
 Maybe one day I will have some nice pixel art to animate with https://github.com/jvalen/pixel-art-react
 or figure out how to such things with gsap https://www.youtube.com/watch?v=WaoeZkm92t8&t=1s&ab_channel=Vaank
 
-But there is a cool thing in that app: it tracks a color from an album picture and the music player bar has the same tones
+But there is a cool thing in that app: it tracks a color from an album picture and the music player bar has the same tones.
 Check it out : https://chillhop-radio-itsrisingtide.netlify.app
