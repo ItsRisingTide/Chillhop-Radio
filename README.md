@@ -1,3 +1,5 @@
+Check it out : https://chillhop-radio-itsrisingtide.netlify.app
+
 It's a chillhopRadio player as an alterenative to popular YouTube videos like https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=ChilledCow.
 The idea is that because people really liked custom cyclic animation for a video to listen on a background I feel like
 the same approach can be used in player apps.
